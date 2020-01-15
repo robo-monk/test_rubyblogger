@@ -1,0 +1,5 @@
+<div>
+  <span> <b><%= comment.author_name %></b> <i> (<%= distance_of_time_in_words(Time.now, comment.created_at) %> ago) </i></span>
+    <p class="comment"><%= comment.body %></p>
+
+</div>
