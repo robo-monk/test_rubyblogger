@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
-
+    before_action :require_login, only: [:destroy]
     def show
         @tag = Tag.find(params[:id])
     end
@@ -13,7 +13,7 @@ class TagsController < ApplicationController
         @tag.destroy
         flash.notice = "Tag '#{@tag}' got complety fucking obliterated!"
         redirect_to tags_path
-        
+
     end
 
 end
